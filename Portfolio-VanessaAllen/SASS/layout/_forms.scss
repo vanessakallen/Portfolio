@@ -1,0 +1,93 @@
+// Style for the form wrapper
+.contactWrapper {
+  margin: 0 auto;
+
+  // Style for the form heading
+  h2 {
+    @include mainHeadingStyle;
+  }
+
+  form {
+    text-align: center;
+    padding: 2rem;
+    margin: -2rem 1rem 0 1rem;
+
+    .hidden {
+      visibility: hidden;
+    }
+
+      input,
+      textarea {
+        display: block;
+        margin: auto;
+        width: 85%;
+
+        font-family: $generalFont;
+        padding: .5rem 0 .5rem .5rem;
+        border-radius: 20px;
+        font-size: 1.25rem;
+        border: none;
+        transition: all .25s ease-in-out;
+  
+        &:hover {
+          @include boxShadow;
+        }
+      }
+
+      #message {
+        min-width: 85%;
+        max-width: 85%;
+        max-height: 10rem;
+      }
+
+    #submitBtn {
+      @include buttonStyle;
+    }
+
+  }
+
+
+  @media screen and (min-width: $tabletView) {
+    margin: 0 3rem 0 3rem;
+  }
+
+
+
+  // DESKTOP VIEW
+  @media screen and (min-width: $desktopView) {
+    margin: 0 5rem 0 5rem;
+ 
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+
+      .contactGrid1 {
+        width: 20rem;
+        margin: 0 auto 0 auto;
+        
+        input {
+          width: 20rem;
+        }
+      }
+
+      .contactGrid2 {
+        width: 20rem;
+
+        textarea {
+          height: 6rem;
+          margin: 0 auto 0 auto;
+          margin-bottom: .75rem;
+        }
+
+        #submitBtn {
+          width: 17.5rem;
+          padding: .5rem;
+          margin: 0 auto 0 auto;
+
+        }
+      }
+    }
+  }
+}
+

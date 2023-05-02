@@ -1,0 +1,101 @@
+.loginPage {
+    h2 {
+        margin: 2rem 1rem 1rem 1rem;
+    }
+    
+    .links {
+        text-align: center;
+        margin: 0;
+        #loginBackLink {
+            @include hrefStyle;
+            font-size: 1.5rem; 
+        }
+    }
+    
+    .loginForms {
+        text-align: center; 
+        background-color: $accentBackgroundColour;
+        margin: 3rem 1rem 0 1rem;
+        padding-bottom: 2rem;
+        border-radius: 20px;
+    
+    
+        label {
+            font-family: $generalFont;
+        }
+    
+        input {
+            display: block;
+            margin: auto;
+            font-family: $generalFont;
+            padding: .75rem;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            border: none;
+            transition: all .25s ease-in-out;
+    
+            &:hover {
+                @include boxShadow;
+            }
+        }
+    
+        #loginBtn,
+        #createBtn,
+        #checkAdminBtn {
+            @include buttonStyle;
+        }
+    
+    }
+    
+    // admin form
+    .adminForm {
+    
+        margin: 4rem 3rem 3rem 3rem;
+        border-radius: 20px;
+    
+        .loginForms {
+            margin: .5rem 0 0 0;
+        }
+    
+        h2 {
+            background-color: $accentBackgroundColour;
+            color: rgb(184, 31, 31);
+            border-radius: 20px;
+            padding: .25rem;
+            margin: 3rem 0 0 0;
+        }
+        
+    
+        input {
+            background-color: rgb(249, 197, 197);
+            border: 1px solid rgb(184, 31, 31);
+            transition: all .25s ease;
+            max-width: 90%;
+    
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+    
+    // DESKTOP VIEW
+    @media screen and (min-width: $tabletView) {
+        .allUserForms {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin: 0 3rem 0 3rem;
+    
+            .loginForms {
+                @include boxShadow;
+            }
+        }
+    
+        .adminForm {
+            @include boxShadow;
+            margin: 5rem 8rem 5rem 8rem;
+    
+        }
+    }
+}
+

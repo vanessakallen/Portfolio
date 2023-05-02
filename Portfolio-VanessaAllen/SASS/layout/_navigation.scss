@@ -1,0 +1,66 @@
+.dropdown {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    transition: all 1s ease;
+
+
+    // Button
+    #dropdownBtn {
+        background-color: $mainAccentColour;
+        border-radius: 10px;
+        border: none;
+        color: $mainBackgroundColour;
+        transition: all .2s ease;
+
+        &:hover {
+            @include boxShadow;
+            background-color: $dropdownColour;
+        }
+
+        p{
+            padding: .5rem;
+            font-size: 1.5rem;
+        }
+    }
+    .dropdownContent {
+        display: none;
+        position: absolute;
+        background-color: $dropdownColour;
+        top: 100%;
+        left: -2rem;  
+        @include boxShadow;   
+    
+        ul {
+            width: 100vw;
+            display: flex;
+            // justify-content: center;
+            flex-wrap: wrap;
+            
+            li {
+                font-size: 1.5rem;
+                display: inline-block;
+                flex: 1 1 auto;
+                text-align: center;
+                
+                a {
+                    color: black;
+                    transition: all .5s ease;
+                    font-family: $generalFont;
+                    border-radius: 10px;
+                    padding: 0 .25rem 0 .25rem;
+
+                    &:hover {
+                        color: $mainAccentColour;
+                        background-color: $accentBackgroundColour;
+                    }
+                }
+            }
+        }
+    }
+}
+// Show dropdown menu
+.dropdown:hover .dropdownContent {
+    display: block;
+    padding: 1rem;
+}

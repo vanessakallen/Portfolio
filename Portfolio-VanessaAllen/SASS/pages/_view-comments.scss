@@ -1,0 +1,69 @@
+// backend/comment/read-post.php styles
+
+body {
+    font-family: $generalFont;
+}
+// h1
+#read-posth1 {
+    text-align: center;
+    font-family: $headingFont;
+    margin: 3rem 0 2rem 0;
+}
+ 
+// Links
+.readpost-links {
+    margin: 0 0 2rem 2rem;
+    a {
+        @include hrefStyle;
+    }   
+}
+
+#auth-readpost-ul {
+    text-align: center;
+    padding: 0;
+    margin: 0 2rem 0 2rem;
+} 
+
+#auth-readpost-item {
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 20px;
+    background-color: $accentBackgroundColour;
+    border: 2px solid $mainAccentColour;
+    transition: all .25s ease;
+
+    &:hover {
+        background-color: $mainAccentColour;
+        color: $mainBackgroundColour;
+    }
+}
+
+// Message
+#auth-readpost-message { 
+    list-style-type: none;
+    font-size: 1.25rem;
+}
+
+// Date
+#auth-readpost-postedon {
+    font-size: 1rem;
+}
+
+// TABLET VIEW
+@media screen and (min-width: $tabletView) {
+    #auth-readpost-ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+// DESKTOP VIEW
+
+@media screen and (min-width: $desktopView) {
+    #auth-readpost-ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}

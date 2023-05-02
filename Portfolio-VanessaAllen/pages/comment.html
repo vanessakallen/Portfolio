@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- CSS -->
+     <link rel="stylesheet" href="../dist/css/style.min.css">
+     <!-- Tab Icon -->
+     <link rel="icon" href="../images/tabIcon.png">
+     <title>Vanessa Allen - Comment</title>
+</head>
+<body> 
+    <div class="makeComment">
+        <h1>Post a Comment</h1>
+        <h2>Comments will be displayed anonymously for everyone to see, so please be mindful.</h2>
+
+        <li><a href="../backend/comment/read-post.php">View Comments</a></li>
+
+        <form id="makeCommentForm" action="../backend/comment/create-post.php" method="POST">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <input id="postMessageBtn" type="submit" value="Post">
+        </form>
+
+        <li><a href="../backend/auth/logout.php">Logout</a></li>
+ 
+    </div>
+</body>
+</html>

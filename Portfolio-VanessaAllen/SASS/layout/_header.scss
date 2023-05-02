@@ -1,0 +1,187 @@
+// MAIN HEADER SECTION
+header {
+    padding: 4rem 1rem 0 1rem;
+    margin-bottom: 5rem;
+
+    .headerImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 16rem;
+        margin: 3rem auto 4rem auto;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            padding: .5rem;
+            // background-color: rgba(62, 93, 62, 0.552);
+            background-color: $mainAccentColour; 
+            transition: all .5s ease;
+
+            &:hover {
+                @include boxShadow;
+                padding: 1.25rem;
+            }
+        }
+    }
+
+    #greeting {
+        text-align: center;
+        margin-bottom: -3rem;
+        font-family: $generalFont;
+    }
+
+    .name-and-job {
+        margin: auto;
+        width: 20rem;
+
+        h1 {
+            font-family: $headingFont;
+            text-align: center;
+            font-size: 3.25rem;
+        }
+
+        #job {
+            text-align: center;
+            margin-top: -2rem;
+            font-family: $generalFont;
+        }
+    }
+
+    #introduction {
+        @include mainParagraphStyle;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    // SOCIALS MENU
+    .socials {
+
+        ul {
+            margin-top: 2rem;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                font-size: 1.5rem;
+                width: 4rem;
+
+                #linkedin, #github {
+                    color: $mainAccentColour;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        @include boxShadow;
+                        background-color: $mainAccentColour;
+                        color: $accentBackgroundColour;
+                        border-radius: 10px;
+                        padding: .5rem .5rem .5rem .5rem;
+
+                    }
+                }
+            }
+
+            #resume {
+                background-color: $mainAccentColour;
+                border-radius: 25px;
+                padding: .15rem 1.25rem .15rem 1rem;
+                width: 4rem;
+                margin-right: 1rem;
+                font-size: 1.25rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    @include boxShadow;
+                    padding: .5rem 2rem .5rem 2rem;
+
+                }
+
+                a {
+                    font-family: $generalFont;
+                    color: black;
+                    box-shadow: none;
+                }
+
+            }
+        }
+    }
+}
+
+// TABLET VIEW
+@media screen and (min-width: $tabletView) {
+    #header {
+        text-align: center;
+
+        .headerImg {
+            display: inline-block;
+            max-width: 15rem;
+            margin: 2rem 1rem 2rem 1rem;
+        }
+
+        .name-and-job {
+            margin: 2rem 0 0 2rem;
+            display: inline-block;
+
+            #title {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+// DESKTOP VIEW
+@media screen and (min-width: $desktopView) {
+    header {
+        .headerImg {
+            min-width: 20rem;
+        }
+
+        .name-and-job {
+            margin: 5rem;
+
+            // NOT WORKING FIX DJLJDADPI:XZCOJMJQAHNDP:Wa DLDZ
+            #greeting {
+                font-size: 2.75rem;
+            }
+
+            h1 {
+                .colourGreen {
+                    font-size: 4rem;
+                }
+
+                .uncoloured {
+                    font-size: 4rem;
+                }
+            }
+
+        }
+
+        #introduction {
+            font-size: 1.75rem;
+            margin: 3rem 2rem 0 2rem;
+        }
+
+        .socials {
+            ul {
+                display: inline-block;
+                #resume {
+                    font-size: 2rem;
+                    padding: 0 4rem 0 2rem;
+                    margin-right: 3rem;
+
+                    &:hover {
+                        padding: 0 5rem 0 3rem;
+
+                    }
+                }
+                li {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

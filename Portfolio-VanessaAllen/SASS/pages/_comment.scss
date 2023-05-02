@@ -1,0 +1,73 @@
+// comment.html page styles
+
+.makeComment {
+    font-family: $generalFont;
+    h1 {
+        text-align: center;
+        font-family: $headingFont;
+        font-size: 3rem;
+        margin: 3rem 0 -1rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin: 0 1rem 0 1rem;
+    }
+
+    // Form
+    #makeCommentForm {
+        background-color: $accentBackgroundColour;
+        border-radius: 20px;
+        padding: 2rem 0 3rem 0;
+        margin: 1rem 1rem 3rem 1rem;
+
+        label {
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        #message {
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            min-width: 15rem;
+            max-width: 15rem;
+            font-size: 1.5rem;
+            max-height: 15rem;
+
+            &:hover {
+                @include boxShadow;
+            }
+        }
+
+        // Post button
+        #postMessageBtn {
+            @include buttonStyle;
+            
+        }
+
+        
+    }
+
+    // Links
+    li {
+        margin: 0 0 2rem 0;
+        text-align: center;
+        a {
+            @include hrefStyle;
+        }
+    }
+    
+    @media screen and (min-width: $tabletView) {
+        
+        #makeCommentForm {
+            margin: 1rem 5rem 8rem 5rem;
+        }
+
+        a {
+            font-size: 2rem;
+        }
+    }
+}
+
