@@ -1,0 +1,63 @@
+// Headings
+@mixin mainHeadingStyle {
+    text-align: center;
+    font-size: 2rem;
+    font-family: $headingFont;
+    padding: 2rem 0 0 0;
+    margin: 0 0 2rem 0;
+}
+
+@mixin boxShadow {
+    box-shadow: 1px 2px 8px 8px $shadowColour;
+}
+
+@mixin mainSectionStyle {
+    background-color: $accentBackgroundColour; 
+
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+// Paragraph styling (for header and main)
+@mixin mainParagraphStyle {
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+    font-size: 1.25rem;
+    font-family: $generalFont;
+}
+
+@mixin hrefStyle {
+    font-family: $generalFont;
+    color: $mainAccentColour;
+    padding: .5rem;
+    border-radius: 20px;
+    transition: all .25s ease;
+
+    &:hover {
+        @include boxShadow;
+        text-decoration: 2px solid $mainAccentColour underline;
+        color: $mainBackgroundColour;
+        background-color: $fontColour;
+    }
+}
+
+@mixin buttonStyle {
+    padding: .5rem 3rem .5rem 3rem;
+    display: block;
+    margin: 2rem auto 0 auto;
+    color: black;
+    font-size: 1.5rem;
+    font-family: $generalFont;
+    border-radius: 20px;
+    background-color: $mainAccentColour;
+    transition: all .3s ease;
+
+
+    &:hover {
+        background-color: $mainBackgroundColour;
+        color: $mainAccentColour;
+        border: 2px solid $fontColour;
+        @include boxShadow;
+    }
+}

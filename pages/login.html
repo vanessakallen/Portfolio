@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../dist/css/style.min.css">
+    <!-- Tab Icon -->
+    <link rel="icon" href="../images/tabIcon.png">
+    <title>Vanessa Allen - Login</title>
+</head>
+
+<body>
+    <div class="loginPage">
+        <h2>Please login or create an account to view or make comments.</h2>
+        <div class="links">
+            <a id="loginBackLink" href="../index.html">Return to Home</a>
+        </div>
+
+        <div class="allUserForms">
+            <!-- CREATE USER -->
+            <form class="loginForms" action="../backend/auth/create-user.php" method="POST">
+                <h2>Create User</h2>
+                <label for="userUser">Username</label>
+                <input id="userUser" type="text" name="userUser" />
+                <label for="userPass">Password</label>
+                <input id="userPass" type="password" name="userPass" />
+                <br>
+                <button id="createBtn" type="submit">Create</button>
+            </form>
+
+            <!-- LOGIN USER -->
+            <form class="loginForms" action="../backend/auth/login-user.php" method="POST">
+                <h2>Login User</h2>
+                <label for="userUser">Username</label>
+                <input type="text" name="userUser" />
+                <label for="userPass">Password</label>
+                <input type="password" name="userPass" />
+                <br>
+                <button id="loginBtn" type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="adminForm">
+            <!-- ADMIN LOGIN -->
+            <h2>Admin-Only Login</h2>
+            <form class="loginForms" action="../backend/script/script.php" method="POST">
+                <label for="adminUser">Username</label>
+                <input type="text" id="adminUser" name="adminUser" required>
+                <br>
+                <label for="adminPass">Password</label>
+                <input type="password" id="adminPass" name="adminPass" required>
+                <br>
+                <input type="submit" id="checkAdminBtn" name="checkAdminBtn" value="Login">
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

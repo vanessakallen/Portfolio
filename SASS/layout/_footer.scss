@@ -1,0 +1,64 @@
+footer {
+  margin: 3rem;
+
+  .footerLinks {
+    text-align: center;
+    margin-top: 1rem;
+    li {
+      margin-bottom: 2rem;
+      
+      a {
+        @include hrefStyle;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  p {
+    color: $mainAccentColour;
+    font-size: 1rem;
+    transition: all .25s ease;
+    padding: .75rem;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  // TABLET VIEW
+  @media screen and (min-width: $tabletView){
+    .copyright-wrapper {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        text-align: center;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+      
+    }
+  }
+
+  // DESKTOP VIEW
+  @media screen and (min-width: $desktopView){
+    .copyright-wrapper {
+      ul {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        .footerLinks {
+          li {
+            display: inline;
+            margin-right: 5rem;
+          }
+         
+        }
+  
+      }
+      
+    }
+  }
+  
+}

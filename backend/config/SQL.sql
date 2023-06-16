@@ -1,0 +1,19 @@
+use PortfolioSite;
+
+CREATE TABLE Admins (
+	adminID int AUTO_INCREMENT PRIMARY KEY,
+	adminUser VARCHAR(255),
+    adminPass VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Users (
+	userID int AUTO_INCREMENT PRIMARY KEY,
+	userUser VARCHAR(255),
+    userPass VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Comments (
+    commentID int AUTO_INCREMENT PRIMARY KEY,
+    message VARCHAR(255) NOT NULL,
+    postedOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);
